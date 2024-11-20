@@ -2,10 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationFactory {
-    public static List<Notification> getNotifications(List<String> preferences) {
-        List<Notification> notifications = new ArrayList<>();
-        for (String preference : preferences) {
-            switch (preference.toLowerCase()) {
+    public static List<Notification> getNotifications(final List<String> preferences) 
+    {
+        List<Notification> notifications;
+
+        notifications  = new ArrayList<>();
+        for (String preference : preferences)
+         {
+            switch (preference.toLowerCase()) 
+            {
                 case "email":
                     notifications.add(new EmailNotification());
                     break;
